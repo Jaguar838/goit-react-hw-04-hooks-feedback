@@ -1,1 +1,1 @@
-FEEDBACK_OPTIONS =
+export const FEEDBACK_OPTIONS  = ["good", "neutral", "bad"];
