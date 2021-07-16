@@ -8,6 +8,7 @@ export const Section = ({ title, children }) =>
 {children}
 </div>;
 
-Container.propTypes = {
+Section.propTypes = {
+  title: PropTypes.string,
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };

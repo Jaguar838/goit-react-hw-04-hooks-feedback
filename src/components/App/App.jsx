@@ -1,11 +1,13 @@
+import React, { Component } from 'react';
+
 import { FeedbackOptions } from 'components/FeedbackOptions';
 import { Section } from 'components/Section';
-import { Statistics } from 'components/Statistics';
-import { Notification } from 'components/Notification';
+// import { Statistics } from 'components/Statistics';
+// import { Notification } from 'components/Notification';
 
 import {FEEDBACK_OPTIONS} from 'server/constants';
 
-import css from 'components/App.module.css';
+import css from './App.module.css';
 
 class App extends Component {
   state = {
@@ -14,10 +16,10 @@ class App extends Component {
     bad: 0,
   }
   
-  handleFeedback = ({ target }) => {
-    const { feedback } = <target className="dataset">
-      this.setState{(prevState)=>{{[feedback]: prevState[feedback]+1}}}
-  }
+  // handleFeedback = ({ target }) => {
+  //   const { feedback } = <target className="dataset"/>
+  //     this.setState{(prevState)=>{{[feedback]: prevState[feedback]+1}}}
+  // }
       
  render() {
         return (
