@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 const FeedbackBtn = ({ feedback, onLeaveFeedback }) => {
   return (
     <button type="button" data-feedback={feedback} onClick={onLeaveFeedback}>
