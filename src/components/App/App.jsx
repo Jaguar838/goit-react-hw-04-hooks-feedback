@@ -19,7 +19,7 @@ class App extends Component {
       this.setState{(prevState)=>{{[feedback]: prevState[feedback]+1}}}
   }
       
-      render() {
+ render() {
         return (
 <div className={css.App}>
 <Section title='Please leave feedback '>
