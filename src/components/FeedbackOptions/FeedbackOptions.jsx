@@ -12,7 +12,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return options.map(option => <FeedbackBtn feedback={option} onLeaveFeedback={onLeaveFeedback} />);
 };
 
-FeedbackOptions.PropTypes = {
+FeedbackOptions.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string),
   onLeaveFeedback: PropTypes.func.isRequired,
 };
