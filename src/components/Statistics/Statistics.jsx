@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types'
 import { Notification } from '../Notification';
+import css from './Statistics.module.scss'
 
-export const Statistics = ({ good, neutral, bad, total, positivePercantage }) => {
+export const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
     return (
         <>
             {total > 0 && (
-                <ul>
-                    <li>Good: {good}</li>
-                    <li>Neutral: {neutral}</li>
-                    <li>Bad: {bad}</li>
-                    <li>Total: {total}</li>
-                    <li>Positive Percantage: {positivePercantage}</li>
+                <ul className={css.statisticList}>
+                    <li className={css.statisticItem}>Good: {good}</li>
+                    <li className={css.statisticItem}>Neutral: {neutral}</li>
+                    <li className={css.statisticItem}>Bad: {bad}</li>
+                    <li className={css.statisticItem}>Total: {total}</li>
+                    <li className={css.statisticItem}>Positive Percentage: {positivePercentage}</li>
                 </ul>
             )}
             {total === 0 && <Notification message='No Feedback given' />}
@@ -18,9 +19,9 @@ export const Statistics = ({ good, neutral, bad, total, positivePercantage }) =>
     )
 };
 Statistics.propTypes = {
-    good: PropTypes.string,
-    neutral: PropTypes.string,
-    bad: PropTypes.string,
-    total: PropTypes.string,
-    positivePercantage: PropTypes.string,
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired,
+    positivePercentage: PropTypes.number.isRequired,
 };
