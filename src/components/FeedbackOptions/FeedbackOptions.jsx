@@ -9,7 +9,7 @@ const FeedbackBtn = ({ feedback, onLeaveFeedback }) => {
 };
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  return options.map(option => <FeedbackBtn feedback={option} onLeaveFeedback={onLeaveFeedback} />);
+  return options.map(option => <FeedbackBtn key={option.feedback} feedback={option} onLeaveFeedback={onLeaveFeedback} />);
 };
 
 FeedbackOptions.propTypes = {
