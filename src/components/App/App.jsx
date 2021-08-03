@@ -34,11 +34,20 @@ function App() {
         }
     }
 
-    function positiveCountFeedback() {
-        const total = good + neutral + bad;
+    function countTotalFeedback() {
+    const total = good + neutral + bad; 
+    return total;
+    }
+
+   
+
+    function positiveCountFeedback(total) {
         return total ? Math.round((good / total) * 100) : 0;
     }
 
+    const total = countTotalFeedback();
+    const positivePercentage= positiveCountFeedback(total);
+    
     return (
         <Container className={css.App}>
             <Section title="Please leave feedback ">
@@ -53,7 +62,7 @@ function App() {
                     neutral={neutral}
                     bad={bad}
                     total={total}
-                    positivePercentage={positiveCountFeedback()}
+                    positivePercentage={positivePercentage}
                 />
             </Section>
         </Container>
